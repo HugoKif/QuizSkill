@@ -1,0 +1,318 @@
+:root {
+  --couleur1: #c9e8ff;
+  --couleur2: #f2a22e;
+  --couleur3: #2ea3f2;
+}
+body {
+  font-family: "Doppio One", sans-serif;
+  margin: 0;
+  background-color: var(--couleur1);
+}
+a {
+  color: black;
+  text-decoration: none;
+  transition: 0.5s;
+}
+input {
+  cursor: pointer;
+}
+a:hover {
+  color: white;
+}
+header {
+  height: 100px;
+}
+#logo {
+  position: absolute;
+  width: 215px;
+  height: 60px;
+  left: 30px;
+  top: 30px;
+}
+#home {
+  position: absolute;
+  right: 200px;
+  top: 30px;
+}
+#profil {
+  position: absolute;
+  right: 90px;
+  top: 30px;
+}
+
+.titre {
+  text-align: center;
+}
+.themes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.theme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 140px;
+  height: 140px;
+  background-color: var(--couleur2);
+  border-radius: 100px;
+  font-size: 27px;
+  vertical-align: middle;
+}
+p {
+  margin: 0;
+}
+
+.description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.des {
+  text-align: center;
+  font-size: 22px;
+  width: 140px;
+}
+.boutons {
+  display: flex;
+  justify-content: space-around;
+}
+#lancerhtml,
+#lancercss,
+#lancercg {
+  background-color: var(--couleur3);
+  font-family: "Doppio One", sans-serif;
+  font-size: 17px;
+  width: 150px;
+  height: 36px;
+  border-radius: 50px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.pseudo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.315);
+  transition: 1.5s;
+}
+.enlever {
+  display: none;
+}
+#name {
+  width: 170px;
+  height: 25px;
+  margin-top: 40px;
+}
+
+#envoyer {
+  background-color: var(--couleur3);
+  font-family: "Doppio One", sans-serif;
+  font-size: 20px;
+  width: 130px;
+  height: 32px;
+  border-radius: 50px;
+  margin-top: 30px;
+}
+
+form {
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.formpseudo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -100%;
+  height: 270px;
+  width: 480px;
+  background-color: var(--couleur2);
+  border-radius: 50px;
+  transition: 1.5s;
+}
+.test {
+  top: 0%;
+}
+/* Footer */
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: -80px;
+  height: 120px;
+  background-color: var(--couleur3);
+}
+.footligne1 {
+  display: flex;
+  margin-top: 30px;
+  margin-left: 10px;
+  justify-content: space-around;
+}
+.reseaux {
+  display: flex;
+  flex-direction: row;
+}
+.facebook,
+.twitter,
+.linkedin,
+.youtube {
+  display: flex;
+  justify-content: center;
+  margin-left: 10px;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  background-color: var(--couleur1);
+  transition: 0.5s;
+}
+.facebook:hover,
+.twitter:hover,
+.linkedin:hover,
+.youtube:hover {
+  color: white;
+  background-color: var(--couleur2);
+}
+#logofooter {
+  width: 150px;
+  height: 40px;
+}
+h3 {
+  text-align: center;
+  font-size: 15px;
+}
+
+.debut {
+  height: 470px;
+  width: 900px;
+  background-color: var(--couleur2);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: 3s;
+  left: 0%;
+}
+
+.debutbye {
+  left: -200%;
+}
+#logohtml {
+  width: 140px;
+  height: 140px;
+}
+#commencer {
+  background-color: var(--couleur3);
+  font-family: "Doppio One", sans-serif;
+  font-size: 20px;
+  width: 140px;
+  height: 34px;
+  border-radius: 50px;
+}
+.question1html {
+  position: absolute;
+  right: -100%;
+  top: 10%;
+  transition: 2s;
+}
+.appartionquestion {
+  display: block;
+  top: 10%;
+  right: 22%;
+}
+.question {
+  text-align: center;
+  font-size: 30px;
+}
+.containerquestion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 400px;
+  width: 800px;
+  background-color: var(--couleur2);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+#photoq11 {
+  width: 600px;
+  height: 250px;
+}
+.Q1 {
+  font-size: 27px;
+}
+.reponse {
+  background-color: var(--couleur3);
+  font-family: "Doppio One", sans-serif;
+  font-size: 20px;
+  width: 140px;
+  height: 34px;
+  border-radius: 50px;
+}
+.containerreponse {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+#countdown {
+  padding-left: 20px;
+  position: relative;
+  margin: 0;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+}
+.countdownend {
+  display: none;
+}
+#countdown-number {
+  color: black;
+  display: inline-block;
+  line-height: 40px;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  transform: rotateY(-180deg) rotateZ(-90deg);
+}
+
+.countdowncercle {
+  stroke-dasharray: 113px;
+  stroke-dashoffset: 0px;
+  stroke-linecap: round;
+  stroke-width: 2px;
+  stroke: Black;
+  fill: none;
+  animation: countdown 21s linear infinite forwards;
+}
+
+@keyframes countdown {
+  from {
+    stroke-dashoffset: 0px;
+  }
+  to {
+    stroke-dashoffset: 113px;
+  }
+}
+.questioncompteur {
+  display: flex;
+  justify-content: center;
+}
