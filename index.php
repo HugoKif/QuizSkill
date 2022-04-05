@@ -1,3 +1,7 @@
+<?php $bdd=new PDO("mysql:host=localhost;dbname=quiz;charset=utf8mb4", "root","");
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +16,7 @@
 <body>
     <div class="pseudo">
         <div class="formpseudo">
-            <form>
+            <form method="post">
                 <label for="name">Rentrez votre pseudo </label>
                 <input type="text" name="name" id="name" required>
                 <input id="envoyer" type="submit" value="Envoyer">
@@ -53,7 +57,7 @@
     </div>
 </div>
 <div class="boutons">
-    <a href="quizhtml.html"><input id="lancerhtml" type="submit" value="Lancer le Quiz"></a>
+    <a href="quizhtml.php"><input id="lancerhtml" type="submit" value="Lancer le Quiz"></a>
     <input id="lancercss" type="submit" value="Lancer le Quiz">
     <input id="lancercg" type="submit" value="Lancer le Quiz">
 </div>
