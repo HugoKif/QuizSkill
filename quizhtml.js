@@ -12,7 +12,7 @@ const question7 = document.querySelector(".qhtml7");
 const question8 = document.querySelector(".qhtml8");
 const question9 = document.querySelector(".qhtml9");
 const question10 = document.querySelector(".qhtml10");
-
+const resultat = document.querySelector(".ensembleresult");
 const containerreponse = document.querySelectorAll(".containerreponse");
 const btn1 = document.querySelectorAll(".r1");
 const btn2 = document.querySelectorAll(".r2");
@@ -35,6 +35,11 @@ let i = 0;
 let j = 1;
 let countdown = 21;
 let countdownNumberEl = document.querySelectorAll(".countdown-number");
+let variableRecuperee = document.querySelectorAll(".Reponse");
+let couleurscore = document.querySelectorAll(".resultat");
+let bonneoumauvaise = document.querySelectorAll(".bonneoumauvaise");
+let score = 0;
+const titrescore = document.querySelector(".score");
 
 commencer.addEventListener("click", () => {
   debut.classList.add("debutbye");
@@ -52,7 +57,6 @@ commencer.addEventListener("click", () => {
 
   setInterval(function () {
     if (i == 1) {
-      console.log("hello");
       return;
     }
     countdown = --countdown <= -1 ? 21 : countdown;
@@ -103,9 +107,18 @@ document.addEventListener("click", (event) => {
     event.target == btn4[8] ||
     event.target == btn4[9]
   ) {
-    let k = j;
+    if (variableRecuperee[i].value == event.target.value) {
+      score++;
+      couleurscore[i].setAttribute("style", "background:green;");
+      bonneoumauvaise[i].setAttribute("style", "color:green");
+      bonneoumauvaise[i].innerHTML = "Bonne Réponse !";
+    } else {
+      bonneoumauvaise[i].innerHTML = "Mauvaise Réponse !";
+      bonneoumauvaise[i].setAttribute("style", "color:red");
+      couleurscore[i].setAttribute("style", "background:red;");
+    }
+    let k = 2;
     countdown = 21;
-    compteur[i].style.display = "none";
     containerreponse[i].setAttribute("style", "justify-content:center");
     tabl[i].setAttribute("style", "position : relative;left : -200%");
     setTimeout(function () {
@@ -117,25 +130,32 @@ document.addEventListener("click", (event) => {
     setTimeout(function () {
       tabl[i].style.display = "none";
     }, 500);
+
+    if (i == 9) {
+      resultat.setAttribute("style", "opacity:1;pointer-events: auto");
+      titrescore.innerHTML = score + "/10";
+    }
+
     cercle[j].classList.add("countdowncercle");
 
     countdownNumberEl[j].textContent = countdown;
 
     setTimeout(function () {
-      i++;
-      j++;
-    }, 600);
-    setTimeout(function () {
       setInterval(function () {
         if (j !== k) {
           return;
         }
-
         countdown = --countdown <= -1 ? 21 : countdown;
 
         countdownNumberEl[i].textContent = countdown;
+        // if (countdown == 0) {
+        // }
       }, 1000);
     }, 700);
+    setTimeout(function () {
+      i++;
+      j++;
+    }, 600);
   }
 });
 

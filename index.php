@@ -18,7 +18,7 @@
         <div class="formpseudo">
             <form method="post">
                 <label for="name">Rentrez votre pseudo </label>
-                <input type="text" name="name" id="name" required>
+                <input type="text" name="name" id="pseud" required>
                 <input id="envoyer" type="submit" value="Envoyer">
             </form>
         </div>
